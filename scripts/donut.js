@@ -1,37 +1,48 @@
 (function() {
-	var DonutShop = function(location, min, max, average) {
+
+
+
+	/*DonutShop.prototype.isOpen(time) {
+		return (time > this.opens && time < this.closes);
+	};*/
+
+	var DonutShop = function(location, minCust, maxCust, avgDonPurch, opens, closes) {
 		this.location = location;
-		this.min = min;
-		this.max = max;
-		this.average = average;
+		this.minCust = minCust;
+		this.maxCust = maxCust;
+		this.avgDonPurch = avgDonPurch;
+		this.opens = opens;
+		this.closes = closes;
 		hourlyTotals = [];
-		dailyTotals = [];
 	}
-	var downtown = new DonutShop('Downtown', 8, 43, 4.50);
-	var capitolHill = new DonutShop('Capitol Hill', 4, 37, 2.00);
-	var southLakeUnion = new DonutShop('South Lake Union', 9, 23, 6.33);
-	var wedgewood = new DonutShop('Wedgewood', 2, 28, 1.25);
-	var ballard = new DonutShop('Ballard', 8, 58, 3.75);
+
+	var shops = [];
+
+	shops.push(new DonutShop('Downtown', 8, 43, 4.50, 6, 18))
+	shops.push(new DonutShop('Capitol Hill', 4, 37, 2.00, 6, 18))
+	shops.push(new DonutShop('South Lake Union', 9, 23, 6.33, 6, 18))
+	shops.push(new DonutShop('Wedgewood', 2, 28, 1.25, 6, 18))
+	shops.push(new DonutShop('Ballard', 8, 58, 3.75, 6, 18))
 
 	DonutShop.prototype.generateRandom = function () {
-		customers = Math.floor(Math.random() * (this.max - this.min)) + this.min;
+		customers = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
 		return customers;
+		console.log(customers);
 	}
 	
 	DonutShop.prototype.hourlyDonuts = function() {
-		donutsSold = Math.round(customers * this.average);
+		donutsSold = Math.round(customers * this.avgDonPurch);
 		return donutsSold;
-		
 	}
 
-	for (var hours = 7; hours < 18; hours++) {
-		downtown.generateRandom();
+	for (var hours = 7; hours < 18; hours++) {//this should loop thru the array of instances
+		//this.generateRandom();
 		console.log('Hour: ' + hours);
 		console.log('Customers: ' + customers);
-		downtown.hourlyDonuts();
+		//this.hourlyDonuts();
 		this.hourlyTotals.push(donutsSold);
 		console.log('Donuts sold that hour: ' + donutsSold);
-	}
+	};
 
 	DonutShop.prototype.dailyDonuts = function() {
 		var total = 0;
@@ -39,11 +50,10 @@
 		for (var i = 0; i < hourlyTotals.length; i++) {
 			total += hourlyTotals[i];
 		}
-		console.log('Daily Total Sold: ' + total);
 		return total;
 	}
 
-	console.log(downtown.hourlyTotals);
+	console.log(hourlyTotals);
 	console.log(downtown.dailyDonuts());
 
 })();
