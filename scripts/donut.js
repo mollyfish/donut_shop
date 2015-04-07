@@ -66,7 +66,7 @@
 	DonutShop.prototype.render = function() {
 			var locationData = this.hourlyTotals.join([separator = '</td><td>'])
 			var newRow = document.createElement('tr');
-			newRow.innerHTML = '<th>' + this.location + '</th><td>' + locationData + '</td><td>' + this.dailyDonuts() + '</td>';
+			newRow.innerHTML = '<th class="title">' + this.location + '</th><td>' + locationData + '</td><td>' + this.dailyDonuts() + '</td>';
 			var position = document.getElementById('daily-stats');
 			position.appendChild(newRow);
 		}
