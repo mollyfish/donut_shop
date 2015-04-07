@@ -25,12 +25,4 @@
 		event.target.avgDonutPurch.value = '';
 		dataTable.appendChild(newShop.render());
 	});
-
-	/*
-form id: add-location
-location: name = newName
-minCust: name = minCustHr
-maxCust: name = maxCustHr
-avgPurch: name = avgDonutPurch
-*/
 })();
