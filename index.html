@@ -28,8 +28,31 @@
      		<td>5:00 pm</td>
      		<td>Total Sold</td>
      	</tr>
-    </table>		
+    </table>
+    <section>
+      <h2>Add a new location</h2>
+      <form id="add-location">
+        <p>
+          <label for="newName">Location name: </label>
+          <input type="text" name="newName" placeholder="Anytown">
+        </p>
+        <p>
+          <label for="minCustHr">Min. customers/hour: </label>
+          <input type="text" name="minCustHr" size="4">
+        </p>
+        <p>
+          <label for="maxCustHr">Max. customers/hour: </label>
+          <input type="text" name="maxCustHr" size="4">
+        </p>
+        <p>
+          <label for="avgDonutPurch">Avg. # donuts/customer: </label>
+          <input type="text" name="avgDonutPurch" placeholder="0.00" size="6">
+        </p>
+        <button type="submit">Add new location</button>
+      </form>	
+    </section>
 	</main>
 <script src="scripts/donut.js"></script>
+<script src="scripts/newLoc.js"></script>
 </body>
 </html>
