@@ -49,35 +49,28 @@
 
 	console.log(capHill.hourlyTotals);
 	console.log(capHill.hourlyTotals[0]);
+	console.log(capHill.dailyDonuts());
 
 	console.log(slu.hourlyTotals);
 	console.log(slu.hourlyTotals[0]);
+	console.log(slu.dailyDonuts());
 
 	console.log(wedge.hourlyTotals);
 	console.log(wedge.hourlyTotals[0]);
+	console.log(wedge.dailyDonuts());
 
 	console.log(ballard.hourlyTotals);
 	console.log(ballard.hourlyTotals[0]);
-
+	console.log(ballard.dailyDonuts());
 
 	DonutShop.prototype.render = function() {
-		//counter = 1;
-		//for (var i = 0; i < 3; i++) {
-		//	counter++
 			var locationData = this.hourlyTotals.join([separator = '</td><td>'])
 			var newRow = document.createElement('tr');
 			newRow.innerHTML = '<th>' + this.location + '</th><td>' + locationData + '</td><td>' + this.dailyDonuts() + '</td>';
 			var position = document.getElementById('daily-stats');
 			position.appendChild(newRow);
-
-
-			//var locationData = this.hourlyTotals.join([separator = '</td><td>'])
-			//rowContent.innerHTML = '<th>' + this.location + '</th>';
-			//position.appendChild('rowContent');
 		}
 	
-
-
 downtown.render();
 capHill.render();
 slu.render();
