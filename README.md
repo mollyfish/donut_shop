@@ -1,0 +1,1 @@
+This page has a table displaying a domain model of a donut shop.  The data is based on a random number generator, so it has no real-world significance. Each location has a range for customers per hour, and the number of customers per hour is the random number that gets generated.  Then the hourly and daily total donut sales are compiled and displayed in the table.
