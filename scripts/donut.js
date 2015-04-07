@@ -1,11 +1,9 @@
 (function() {
-	var DonutShop = function(location, minCust, maxCust, avgDonPurch, opens, closes) {
+	var DonutShop = function(location, minCust, maxCust, avgDonPurch) {
 		this.location = location;
 		this.minCust = minCust;
 		this.maxCust = maxCust;
 		this.avgDonPurch = avgDonPurch;
-		this.opens = opens;
-		this.closes = closes;
 		this.hourlyTotals = [];
 	}
 
@@ -33,7 +31,6 @@
 			total += this.hourlyTotals[i];
 		}
 		return total;
-		console.log('Hear me!' + total);
 	}
 
 	for (var hours = 7; hours < 18; hours++) {
@@ -43,6 +40,7 @@
 		wedge.hourlyDonuts();
 		ballard.hourlyDonuts();
 	};
+
 	console.log(downtown.hourlyTotals);
 	console.log(downtown.hourlyTotals[0]);
 	console.log(downtown.dailyDonuts());
@@ -66,7 +64,7 @@
 	DonutShop.prototype.render = function() {
 			var locationData = this.hourlyTotals.join([separator = '</td><td>'])
 			var newRow = document.createElement('tr');
-			newRow.innerHTML = '<th class="title">' + this.location + '</th><td>' + locationData + '</td><td>' + this.dailyDonuts() + '</td>';
+			newRow.innerHTML = '<th class="location">' + this.location + '</th><td>' + locationData + '</td><td>' + this.dailyDonuts() + '</td>';
 			var position = document.getElementById('daily-stats');
 			position.appendChild(newRow);
 		}
