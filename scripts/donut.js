@@ -61,16 +61,26 @@
 
 
 	DonutShop.prototype.render = function() {
-		for (var i = 0; i < 6; i++) {
-			var rowContent = document.getElementsByTagName('tr')[(i + 2)];
-			var cellContents = rowContent.innerHTML;
+		//counter = 1;
+		//for (var i = 0; i < 3; i++) {
+		//	counter++
 			var locationData = this.hourlyTotals.join([separator = '</td><td>'])
-			rowContent.innerHTML = cellContents + '<td>' + locationData + '</td><td>' + this.dailyDonuts() + '</td>';
+			var newRow = document.createElement('tr');
+			newRow.innerHTML = '<th>' + this.location + '</th><td>' + locationData + '</td><td>' + this.dailyDonuts() + '</td>';
+			var position = document.getElementById('daily-stats');
+			position.appendChild(newRow);
+
+
+			//var locationData = this.hourlyTotals.join([separator = '</td><td>'])
+			//rowContent.innerHTML = '<th>' + this.location + '</th>';
+			//position.appendChild('rowContent');
 		}
-	}
+	
 
 
+downtown.render();
 capHill.render();
-
-
+slu.render();
+wedge.render();
+ballard.render();
 })();
