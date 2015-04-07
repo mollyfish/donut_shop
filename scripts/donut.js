@@ -6,7 +6,7 @@
 		this.avgDonPurch = avgDonPurch;
 		this.opens = opens;
 		this.closes = closes;
-		hourlyTotals = [];
+		this.hourlyTotals = [];
 	}
 
 	var downtown = new DonutShop ('Downtown', 8, 43, 4.50);
@@ -15,14 +15,6 @@
 	var wedge = new DonutShop ('Wedgewood', 2, 28, 1.25);
 	var ballard = new DonutShop ('Ballard', 8, 58, 3.75);
 
-	/*var shops = [];
-
-	shops.push(new DonutShop('Downtown', 8, 43, 4.50, 6, 18))
-	shops.push(new DonutShop('Capitol Hill', 4, 37, 2.00, 6, 18))
-	shops.push(new DonutShop('South Lake Union', 9, 23, 6.33, 6, 18))
-	shops.push(new DonutShop('Wedgewood', 2, 28, 1.25, 6, 18))
-	shops.push(new DonutShop('Ballard', 8, 58, 3.75, 6, 18))*/
-
 	DonutShop.prototype.generateRandom = function () {
 		customers = Math.floor(Math.random() * (this.maxCust - this.minCust)) + this.minCust;
 		return customers;
@@ -30,29 +22,65 @@
 	}
 	
 	DonutShop.prototype.hourlyDonuts = function() {
+		this.generateRandom();
 		donutsSold = Math.round(customers * this.avgDonPurch);
-		return donutsSold;
-	}
-
-	for (var hours = 7; hours < 18; hours++) {
-		downtown.generateRandom();
-		console.log('Hour: ' + hours);
-		console.log('Customers: ' + customers);
-		downtown.hourlyDonuts();
 		this.hourlyTotals.push(donutsSold);
-		console.log('Donuts sold that hour: ' + donutsSold);
-	};
+	}
 
 	DonutShop.prototype.dailyDonuts = function() {
 		var total = 0;
-
-		for (var i = 0; i < hourlyTotals.length; i++) {
-			total += hourlyTotals[i];
+		for (var i = 0; i < this.hourlyTotals.length; i++) {
+			total += this.hourlyTotals[i];
 		}
 		return total;
+		console.log('Hear me!' + total);
 	}
 
-	console.log(hourlyTotals);
+	for (var hours = 7; hours < 18; hours++) {
+		downtown.hourlyDonuts();
+		capHill.hourlyDonuts();
+		slu.hourlyDonuts();
+		wedge.hourlyDonuts();
+		ballard.hourlyDonuts();
+	};
+	console.log(downtown.hourlyTotals);
+	console.log(downtown.hourlyTotals[0]);
 	console.log(downtown.dailyDonuts());
+
+	console.log(capHill.hourlyTotals);
+	console.log(capHill.hourlyTotals[0]);
+
+	console.log(slu.hourlyTotals);
+	console.log(slu.hourlyTotals[0]);
+
+	console.log(wedge.hourlyTotals);
+	console.log(wedge.hourlyTotals[0]);
+
+	console.log(ballard.hourlyTotals);
+	console.log(ballard.hourlyTotals[0]);
+
+
+	DonutShop.prototype.render = function() {
+		counter = 0;
+		for (var i=0; i<this.hourlyTotals.length; i++) {
+			var hourCells = document.createElement('td');
+			hourCells.textContent = this.hourlyTotals[i];
+			var position = document.getElementsByTagName('tr')[(counter + 2)];
+			position.appendChild(hourCells);
+
+		}
+		var dailyCell = document.createElement('td');
+			dailyCell.textContent = this.dailyDonuts();
+			var position = document.getElementsByTagName('tr')[(counter + 2)];
+			position.appendChild(dailyCell);
+		counter++
+
+	}
+
+downtown.render();
+capHill.render();
+slu.render();
+wedge.render();
+ballard.render();
 
 })();
