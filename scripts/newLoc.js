@@ -9,7 +9,7 @@
 		if ((!event.target.newName.value) || (!event.target.minCustHr.value) || (!event.target.maxCustHr.value) || (!event.target.avgDonutPurch.value)) {
 			return alert('All fields must be filled in!');
 		}
-		var newShop = new DonutShop(event.target.newName.value, {minCust: Number.parseInt(event.target.minCustHr.value), maxCust: Number.parseInt(event.target.maxCustHr.value), avgDonPurch: Number.parseInt(event.target.avgDonutPurch.value)});
+		var newShop = new DonutShop(event.target.newName.value, {minCust: Number.parseFloat(event.target.minCustHr.value), maxCust: Number.parseFloat(event.target.maxCustHr.value), avgDonPurch: Number.parseFloat(event.target.avgDonutPurch.value)});
 		event.target.newName.value = '';
 		event.target.minCustHr.value = '';
 		event.target.maxCustHr.value = '';
