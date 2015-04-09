@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
   <title>Donut Shop</title>
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
   <link href='http://fonts.googleapis.com/css?family=Port+Lligat+Sans' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
@@ -16,43 +17,47 @@
     <h3>Donuts Sold (per hour)</h3>
     <table id="daily-stats">
      	<tr id="time" class="title">
-     		<td>Location</td>
-     		<td>7:00 am</td>
-     		<td>8:00 am</td>
-     		<td>9:00 am</td>
-     		<td>10:00 am</td>
-     		<td>11:00 am</td>
-     		<td>12:00 pm</td>
-     		<td>1:00 pm</td>
-     		<td>2:00 pm</td>
-     		<td>3:00 pm</td>
-     		<td>4:00 pm</td>
-     		<td>5:00 pm</td>
-     		<td>Total Sold</td>
+        <th>Location</th>
+     		<th>7:00 am</th>
+     		<th>8:00 am</th>
+     		<th>9:00 am</th>
+     		<th>10:00 am</th>
+     		<th>11:00 am</th>
+     		<th>12:00 pm</th>
+     		<th>1:00 pm</th>
+     		<th>2:00 pm</th>
+     		<th>3:00 pm</th>
+     		<th>4:00 pm</th>
+     		<th>5:00 pm</th>
+     		<th>Total Sold</th>
      	</tr>
     </table>
-    <section>
-      <form id="add-location">
-        <fieldset>
-        <legend><h2>Add a new Location</h2></legend>
-        <div class="columns">
-          <div class="left-column">
-          <label for="newName">Location name: </label><br />
-          <label for="minCustHr">Min. customers/hour: </label><br />
-          <label for="maxCustHr">Max. customers/hour: </label><br />
-          <label for="avgDonutPurch">Avg. # donuts/customer: </label>
-          </div>
-          <div class="right-column">
-          <input type="text" name="newName" placeholder="Anytown"><br />
-          <input type="text" name="minCustHr" size="4"><br />
-          <input type="text" name="maxCustHr" size="4"><br />
-          <input type="text" name="avgDonutPurch" placeholder="0.00" size="6">
+    <form id="add-location">
+      <fieldset>
+      <legend><h2>Add a new Location</h2></legend>
+        <div id="form-pairs">
+        <div class="form-pair">
+          <div class="form-label"><label for="newName" id="nnLabel">Location name: </label></div>
+          <div class="form-input"><input type="text" id="newName" name="newName" placeholder="Anytown"></div>
+        </div>
+        <div class="form-pair">
+          <div class="form-label"><label for="minCustHr" id="mnchLabel">Min. customers/hour: </label></div>
+          <div class="form-input"><input type="text" id="minCustHr" name="minCustHr" size="4" placeholder="0"></div>
+        </div>
+        <div class="form-pair">
+          <div class="form-label"><label for="maxCustHr" id="mxchLabel">Max. customers/hour: </label></div>
+          <div class="form-input"><input type="text" id="maxCustHr" name="maxCustHr" size="4" placeholder="0"></div>
+        </div>
+        <div class="form-pair">
+          <div class="form-label"><label for="avgDonutPurch" id="adpLabel">Avg. # donuts/customer: </label></div>
+          <div class="form-input"><input type="text" id="avgDonutPurch" name="avgDonutPurch" placeholder="0.00" size="6"></div>
         </div>
         </div>
-        <button type="submit">Add new location <span id="donut">o</span> »</button>
-        </fieldset>
-      </form>	
-    </section>
+      <button type="submit" id="new-store-button">Add new location <span id="donut">o</span> »</button>
+      </fieldset>
+    </form>	
+    <h3>Paragraph Header</h3>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse blandit augue ac nunc tristique, euismod lacinia dolor lobortis. Curabitur dapibus eleifend velit sed tincidunt. Suspendisse a consequat libero. Cras pretium viverra ante sed dignissim. Ut at ante at ligula pulvinar fermentum vel a purus. Suspendisse at ligula tempor, volutpat nunc vitae, pharetra urna. Nulla quis eleifend ex. Curabitur mattis eu sapien eget fringilla.</p>
 	</main>
 <script src="scripts/donut.js"></script>
 <script src="scripts/newLoc.js"></script>
