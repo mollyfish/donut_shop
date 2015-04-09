@@ -179,18 +179,82 @@ td, th {
   background-color: #efefef;
   border-bottom: 1px solid #BDBDBD;
 }
-/*.columns  {
-  overflow: auto;
-  width: 100%;
+/*$$$$$$$$$$$$$$$$$$$$$
+animation styles
+$$$$$$$$$$$$$$$$$$$$$*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
+
+.donut-div {
+  height: 120px;
+  width: 122px;
+  float:left;
+  margin-top:20px;
+  text-align: center;
+  position:relative;
 }
-.left-column {
-  float: left;
-  text-align: right;
+.bouncing-donut {
+  position:absolute;
+  height: 120px;
+  width: 120px;
+  border-radius:60px ;
+  background-image: url("../images/donut-icon.gif");
+  bottom: 10px;
+  left: 5px;
 }
-.right-column {
-  float: left;
-}*/
-/*#new-store-button {
-  margin-left: 63px;
-}*/
+
+@-webkit-keyframes bouncing {
+  40%,70%,90% {
+    bottom:10px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  0% {
+    bottom:240px;
+    left:5px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  55% {
+    bottom:90px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  80% {
+    bottom:55px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  95% {
+    bottom:30px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  100% {
+    left:5px;
+    bottom:20px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  @-moz-keyframes bouncing {
+    40%,70%,90% {
+      bottom:10px;
+      -webkit-animation-timing-function: ease-out;
+    }
+    0% {
+      bottom:240px;
+      left:5px;
+      -webkit-animation-timing-function: ease-in;
+    }
+    55% {
+      bottom:90px;
+      -webkit-animation-timing-function: ease-in;
+    }
+    80% {
+      bottom:55px;
+      -webkit-animation-timing-function: ease-in;
+    }
+    95% {
+      bottom:30px;
+      -webkit-animation-timing-function: ease-out;
+    }
+    100% {
+      left:5px;
+      bottom:20px;
+      -webkit-animation-timing-function: ease-out;
+    }
+
 
