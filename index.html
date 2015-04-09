@@ -3,51 +3,71 @@
 <head>
 	<meta charset="UTF-8">
   <title>Donut Shop</title>
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
   <link href='http://fonts.googleapis.com/css?family=Port+Lligat+Sans' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
 	<header>
-		<h1>Top Pot Donut Sales</h1>
+		<img src="images/donut-icon.gif">
+    <h1>Top Pot Donut Sales</h1>
 	</header>
 	<main>
 		<p>Compare daily sales stats for various <span class="company">Top Pot Doughnuts</span> locations:</p>
+    <h3>Donuts Sold (per hour)</h3>
     <table id="daily-stats">
-      	<tr class="title"><th colspan="13">Donuts Sold (per hour)</th></tr>
      	<tr id="time" class="title">
-     		<td>Location</td>
-     		<td>7:00 am</td>
-     		<td>8:00 am</td>
-     		<td>9:00 am</td>
-     		<td>10:00 am</td>
-     		<td>11:00 am</td>
-     		<td>12:00 pm</td>
-     		<td>1:00 pm</td>
-     		<td>2:00 pm</td>
-     		<td>3:00 pm</td>
-     		<td>4:00 pm</td>
-     		<td>5:00 pm</td>
-     		<td>Total Sold</td>
+        <th>Location</th>
+     		<th>7:00 am</th>
+     		<th>8:00 am</th>
+     		<th>9:00 am</th>
+     		<th>10:00 am</th>
+     		<th>11:00 am</th>
+     		<th>12:00 pm</th>
+     		<th>1:00 pm</th>
+     		<th>2:00 pm</th>
+     		<th>3:00 pm</th>
+     		<th>4:00 pm</th>
+     		<th>5:00 pm</th>
+     		<th>Total Sold</th>
      	</tr>
     </table>
-    <section>
-      <form id="add-location">
-        <fieldset>
-        <legend><h2>Add a new Location</h2></legend>
-          <label for="newName">Location name: </label>
-          <input type="text" name="newName" placeholder="Anytown"><br />
-          <label for="minCustHr">Min. customers/hour: </label>
-          <input type="text" name="minCustHr" size="4"><br />
-          <label for="maxCustHr">Max. customers/hour: </label>
-          <input type="text" name="maxCustHr" size="4"><br />
-          <label for="avgDonutPurch">Avg. # donuts/customer: </label>
-          <input type="text" name="avgDonutPurch" placeholder="0.00" size="6"><br />
-          <button type="submit">Add new location <span id="donut">o</span> »</button><br />
-        </fieldset>
-      </form>	
-    </section>
+    <form id="add-location">
+      <fieldset>
+      <legend><h2>Add a new Location</h2></legend>
+        <div id="form-pairs">
+        <div class="form-pair">
+          <div class="form-label"><label for="newName" id="nnLabel">Location name: </label></div>
+          <div class="form-input"><input type="text" id="newName" name="newName" placeholder="Anytown"></div>
+        </div>
+        <div class="form-pair">
+          <div class="form-label"><label for="minCustHr" id="mnchLabel">Min. customers/hour: </label></div>
+          <div class="form-input"><input type="text" id="minCustHr" name="minCustHr" size="4" placeholder="0"></div>
+        </div>
+        <div class="form-pair">
+          <div class="form-label"><label for="maxCustHr" id="mxchLabel">Max. customers/hour: </label></div>
+          <div class="form-input"><input type="text" id="maxCustHr" name="maxCustHr" size="4" placeholder="0"></div>
+        </div>
+        <div class="form-pair">
+          <div class="form-label"><label for="avgDonutPurch" id="adpLabel">Avg. # donuts/customer: </label></div>
+          <div class="form-input"><input type="text" id="avgDonutPurch" name="avgDonutPurch" placeholder="0.00" size="6"></div>
+        </div>
+        </div>
+      <button type="submit" id="new-store-button">Add new location <img src="images/tiny-donut.gif"> »</button>
+      </fieldset>
+    </form>	
+    <h3>We have so many Latin-speaking customers!</h3>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse blandit augue ac nunc tristique, euismod lacinia dolor lobortis. Curabitur dapibus eleifend velit sed tincidunt. Suspendisse a consequat libero. Cras pretium viverra ante sed dignissim. Ut at ante at ligula pulvinar fermentum vel a purus. Suspendisse at ligula tempor, volutpat nunc vitae, pharetra urna. Nulla quis eleifend ex. Curabitur mattis eu sapien eget fringilla.</p>
+    <p>Mauris volutpat commodo lacus. Nulla euismod tincidunt nunc, vel convallis felis consectetur eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam fermentum massa eu commodo posuere. Vestibulum at lacus sit amet ligula imperdiet faucibus. Donec laoreet congue turpis, pharetra ultrices arcu rhoncus quis. Ut tincidunt elementum neque, id tristique arcu dictum a. Vivamus velit risus, sodales ac ullamcorper in, eleifend non quam. Vestibulum tempor nibh nisi, nec faucibus lorem sagittis nec. Vivamus ornare vestibulum lacinia. Phasellus lobortis tristique metus non pretium. Ut auctor cursus neque, ac dictum sem rutrum ut. Nulla facilisi. Suspendisse eget tortor non quam lobortis dapibus. Fusce ullamcorper, justo sit amet dictum interdum, dui turpis ornare magna, in volutpat mi diam a elit. In ac est in ante tincidunt luctus.</p>
 	</main>
+  <footer>
+    <img src="images/donut.gif">
+    <div class="foot-width">
+      <h4>Join the Team!</h4>
+      <p>Top Pot Doughnuts is always looking for enthusiatic people.</p><p>Whether you want to open your own store, mop floors,<br />or just eat donuts all day, we want to hear from you!</p>
+    </div>
+  </footer>
 <script src="scripts/donut.js"></script>
 <script src="scripts/newLoc.js"></script>
 <!--<script src="scripts/easterEggs.js"></script>-->

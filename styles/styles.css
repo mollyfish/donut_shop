@@ -1,7 +1,5 @@
 body {
   background-color: #FFF8ED;
-  padding: 0;
-  margin: 0;
   font-family: "Port Lligat Sans", "Times New Roman", sans-serif;
   font-size: 1em;
 }
@@ -9,58 +7,151 @@ header {
   padding: .5em;
   background-image: url(../images/sprinkles.png);
   background-repeat: repeat;
+  height: 120px;
 }
 header h1 {
-  font-size: 200%;
+  font-size: 300%;
   background-color: #fff;
   display: inline-block;
-  padding: .5em;
+  padding: .1em;
+  margin-top: .6em;
 }
-h2 {
+header img {
+  float: left;
+}
+h2, h3 {
   font-size: 160%;
 }
 p {
   font-size: 1.2em;
+  margin-top: .5em;
 }
-h1, h2 {
+h1, h2, h3 {
   color: #4A2811;
   padding: 0;
   margin: 0;
 }
-h2 {
+h2, h3 {
   margin-top: .8em; 
 }
+h4 {
+  font-size: 110%;
+}
 main {
-  margin-top: .8em;
+  margin: .8em 0 140px 0;
   padding-left: .8em;
+}
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 4px;
+  height: 120px;
+  width: 55%;
+  min-width: 660px;
+  background-image: url("../images/gradient.gif");
+  background-repeat: repeat-y;
+  color: #fff;
+  text-align: right;
+}
+footer img {
+  float: right;
+  margin-right: 10px;
+}
+footer h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+footer p {
+  font-size: 95%;
+  margin-top: .3em;
+}
+.foot-width {
+  width: 80%;
 }
 form {
   display: inline-block;
   margin-top: 1em;
+  width: 30%;
 }
 form button {
-  margin-top: .5em;
   background-color: #4A2811;
-  padding: .2em .4em .4em .4em;
+  padding: .3em .4em .4em .4em;
+  margin-top: 6em;
   border: 1px solid #fff;
   border-radius: 3px;
   font-family: "Port Lligat Sans", "Times New Roman", sans-serif;
   font-size: 1.3em;
   color: #fff;
+  clear: both;
 }
 fieldset {
   border: 1px solid #4A2811;
   border-radius: 5px;
   width: 100%;
+  padding: 1em;
+  position: relative;
+  min-width: 320px;
 }
 legend {
   color: #4A2811;
 }
-input {
-  margin: 0 0 .4em 1em;
+label {
+  /*display: inline-block;
+  padding-bottom: 1em;*/
 }
+input {
+  /*display: inline;
+  margin: 0 0 1.3em 1em;*/
+}
+#form-pairs {
+  position: relative;
+}
+.form-pair {
+  width: 100%;
+}
+#nnLabel, #mnchLabel, #mxchLabel, #adpLabel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: right;
+  width: 170px;
+  /*display: inline;*/
+}
+#newName, #minCustHr, #maxCustHr, #avgDonutPurch {
+  /*display: inline;*/
+  position: absolute;
+  left: 175px;
+  top: -4px;
+}
+#mnchLabel {
+  top: 30px;
+}
+#mxchLabel {
+  top: 60px;
+}
+#adpLabel {
+  top: 90px;
+}
+#minCustHr {
+  top: 26px;
+}
+#maxCustHr {
+  top: 56px;
+}
+#avgDonutPurch {
+  top: 86px;
+}
+/*#newName {
+  margin-bottom: 6px;
+}
+#minCustHr {
+}
+#maxCustHr {
+}
+#avgDonutPurch {
+}*/
 table {
-  width: 60%;
+  width: 70%;
   font-family: Arial, sans-serif;
   text-align: center;
   border-spacing: 0;
@@ -68,16 +159,11 @@ table {
   border-radius: 10px;
   background-color: #fff;
   padding-bottom: 4px;
+  overflow: hidden;
+  min-width: 741px;
 }
 td, th {
   padding: 4px;
-}
-.label {
-  display: inline-block;
-  clear: both;
-}
-.input {
-  clear: both;
 }
 .company {
   font-style: italic;
@@ -86,17 +172,22 @@ td, th {
   color: #4A2811;
 }
 .title th {
-  padding: .5em .2em; 
-}
-#time {
-  padding: .5em;
+  padding: .7em .2em; 
   background-color: #efefef;
   border-bottom: 1px solid #BDBDBD;
 }
-#donut {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  color: #FF30BA;
-  margin-left: .7em;
+/*.columns  {
+  overflow: auto;
+  width: 100%;
 }
+.left-column {
+  float: left;
+  text-align: right;
+}
+.right-column {
+  float: left;
+}*/
+/*#new-store-button {
+  margin-left: 63px;
+}*/
 
