@@ -37,6 +37,9 @@ h2, h3 {
 h4 {
   font-size: 110%;
 }
+a {
+  color: #fff;
+}
 main {
   margin: .8em 0 140px 0;
   padding-left: .8em;
