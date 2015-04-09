@@ -7,18 +7,24 @@ header {
   padding: .5em;
   background-image: url(../images/sprinkles.png);
   background-repeat: repeat;
+  height: 120px;
 }
 header h1 {
-  font-size: 200%;
+  font-size: 300%;
   background-color: #fff;
   display: inline-block;
-  padding: .5em;
+  padding: .1em;
+  margin-top: .6em;
+}
+header img {
+  float: left;
 }
 h2, h3 {
   font-size: 160%;
 }
 p {
   font-size: 1.2em;
+  margin-top: .5em;
 }
 h1, h2, h3 {
   color: #4A2811;
@@ -28,9 +34,39 @@ h1, h2, h3 {
 h2, h3 {
   margin-top: .8em; 
 }
+h4 {
+  font-size: 110%;
+}
 main {
-  margin-top: .8em;
+  margin: .8em 0 140px 0;
   padding-left: .8em;
+}
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 4px;
+  height: 120px;
+  width: 55%;
+  min-width: 660px;
+  background-image: url("../images/gradient.gif");
+  background-repeat: repeat-y;
+  color: #fff;
+  text-align: right;
+}
+footer img {
+  float: right;
+  margin-right: 10px;
+}
+footer h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+footer p {
+  font-size: 95%;
+  margin-top: .3em;
+}
+.foot-width {
+  width: 80%;
 }
 form {
   display: inline-block;
@@ -154,10 +190,4 @@ td, th {
 /*#new-store-button {
   margin-left: 63px;
 }*/
-#donut {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  color: #FF30BA;
-  margin-left: .7em;
-}
 
