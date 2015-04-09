@@ -16,13 +16,13 @@ header h1 {
   display: inline-block;
   padding: .5em;
 }
-h2 {
+h2, h3 {
   font-size: 160%;
 }
 p {
   font-size: 1.2em;
 }
-h1, h2 {
+h1, h2, h3 {
   color: #4A2811;
   padding: 0;
   margin: 0;
@@ -39,14 +39,14 @@ form {
   margin-top: 1em;
 }
 form button {
-  margin-top: .5em;
   background-color: #4A2811;
-  padding: .2em .4em .4em .4em;
+  padding: 0 .4em .4em .4em;
   border: 1px solid #fff;
   border-radius: 3px;
   font-family: "Port Lligat Sans", "Times New Roman", sans-serif;
   font-size: 1.3em;
   color: #fff;
+  clear: both;
 }
 fieldset {
   border: 1px solid #4A2811;
@@ -56,8 +56,13 @@ fieldset {
 legend {
   color: #4A2811;
 }
+label {
+  display: inline-block;
+  padding-bottom: 1em;
+}
 input {
-  margin: 0 0 .4em 1em;
+  display: inline;
+  margin: 0 0 1.3em 1em;
 }
 table {
   width: 60%;
@@ -68,16 +73,10 @@ table {
   border-radius: 10px;
   background-color: #fff;
   padding-bottom: 4px;
+  overflow: hidden;
 }
 td, th {
   padding: 4px;
-}
-.label {
-  display: inline-block;
-  clear: both;
-}
-.input {
-  clear: both;
 }
 .company {
   font-style: italic;
@@ -87,6 +86,17 @@ td, th {
 }
 .title th {
   padding: .5em .2em; 
+}
+.columns  {
+  overflow: auto;
+  width: 100%;
+}
+.left-column {
+  float: left;
+  text-align: right;
+}
+.right-column {
+  float: left;
 }
 #time {
   padding: .5em;
