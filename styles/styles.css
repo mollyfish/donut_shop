@@ -47,19 +47,24 @@ main {
 footer {
   position: fixed;
   right: 0;
-  bottom: 4px;
+  bottom: 0;
   height: 120px;
   width: 55%;
   min-width: 660px;
-  background-image: url("../images/gradient.gif");
-  background-repeat: repeat-y;
   color: #fff;
   text-align: right;
+  background: -moz-linear-gradient(left,  rgba(255,248,237,0) 0%, rgba(74,40,17,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,248,237,0)), color-stop(100%,rgba(74,40,17,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(255,248,237,0) 0%,rgba(74,40,17,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(255,248,237,0) 0%,rgba(74,40,17,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(255,248,237,0) 0%,rgba(74,40,17,1) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(255,248,237,0) 0%,rgba(74,40,17,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff8ed', endColorstr='#4a2811',GradientType=1 ); /* IE6-9 */
+
 }
 footer img {
-  float: right;
-  margin-right: 30px;
-  margin-top: 8px;
+  margin: 0;
+  padding: 0;
 }
 footer h4 {
   margin-top: 10px;
@@ -181,12 +186,12 @@ td, th {
   border-bottom: 1px solid #BDBDBD;
 }
 /*$$$$$$$$$$$$$$$$$$$$$
-header donut animation styles
+animation styles
 $$$$$$$$$$$$$$$$$$$$$*/
 
-.donut-div {
+.bouncing-div {
   height: 120px;
-  width: 120px;
+  width: 122px;
   float:left;
   margin-top:20px;
   text-align: center;
@@ -216,12 +221,12 @@ $$$$$$$$$$$$$$$$$$$$$*/
     bottom:90px;
     -webkit-animation-timing-function: ease-in;
   }
-  78% {
+  80% {
     bottom:55px;
     -webkit-animation-timing-function: ease-in;
   }
   95% {
-    bottom:28px;
+    bottom:30px;
     -webkit-animation-timing-function: ease-out;
   }
   100% {
@@ -229,6 +234,7 @@ $$$$$$$$$$$$$$$$$$$$$*/
     bottom:20px;
     -webkit-animation-timing-function: ease-out;
   }
+}
   @-moz-keyframes bouncing {
     40%,70%,90% {
       bottom:10px;
@@ -243,12 +249,12 @@ $$$$$$$$$$$$$$$$$$$$$*/
       bottom:90px;
       -webkit-animation-timing-function: ease-in;
     }
-    78% {
+    80% {
       bottom:55px;
       -webkit-animation-timing-function: ease-in;
     }
     95% {
-      bottom:28px;
+      bottom:30px;
       -webkit-animation-timing-function: ease-out;
     }
     100% {
@@ -256,10 +262,16 @@ $$$$$$$$$$$$$$$$$$$$$*/
       bottom:20px;
       -webkit-animation-timing-function: ease-out;
     }
-/*$$$$$$$$$$$$$$$$$$$$$
-footer donut animation styles
-$$$$$$$$$$$$$$$$$$$$$*/
-.spinning-donut {
-  transform: rotate(180deg);
+  }
+/*spinning animation styles*/
+.spinning {
+  float: right;
+  -webkit-animation-name: spinning;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
 }
-
+@-webkit-keyframes spinning {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
