@@ -63,8 +63,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff8ed', e
 
 }
 footer img {
-  margin: 0;
-  padding: 0;
+  margin: 10px 10px 10px 0;
 }
 footer h4 {
   margin-top: 10px;
@@ -75,7 +74,7 @@ footer p {
   margin-top: .3em;
 }
 .foot-width {
-  width: 80%;
+  width: 82%;
 }
 form {
   display: inline-block;
@@ -226,11 +225,11 @@ $$$$$$$$$$$$$$$$$$$$$*/
     -webkit-animation-timing-function: ease-in;
   }
   95% {
-    bottom:30px;
+    bottom:18px;
     -webkit-animation-timing-function: ease-out;
   }
   100% {
-    left:5px;
+    left:7px;
     bottom:20px;
     -webkit-animation-timing-function: ease-out;
   }
