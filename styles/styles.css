@@ -63,8 +63,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff8ed', e
 
 }
 footer img {
-  margin: 0;
-  padding: 0;
+  margin: 10px 10px 10px 0;
 }
 footer h4 {
   margin-top: 10px;
@@ -75,7 +74,7 @@ footer p {
   margin-top: .3em;
 }
 .foot-width {
-  width: 80%;
+  width: 82%;
 }
 form {
   display: inline-block;
@@ -191,7 +190,7 @@ $$$$$$$$$$$$$$$$$$$$$*/
 
 .bouncing-div {
   height: 120px;
-  width: 122px;
+  width: 128px;
   float:left;
   margin-top:20px;
   text-align: center;
@@ -203,13 +202,13 @@ $$$$$$$$$$$$$$$$$$$$$*/
   width: 120px;
   border-radius:60px ;
   background-image: url("../images/donut-icon.gif");
-  bottom: 10px;
+  bottom: 13px;
   left: 5px;
 }
 
 @-webkit-keyframes bouncing {
   40%,70%,90% {
-    bottom:10px;
+    bottom:13px;
     -webkit-animation-timing-function: ease-out;
   }
   0% {
@@ -226,18 +225,18 @@ $$$$$$$$$$$$$$$$$$$$$*/
     -webkit-animation-timing-function: ease-in;
   }
   95% {
-    bottom:30px;
+    bottom:27px;
     -webkit-animation-timing-function: ease-out;
   }
   100% {
     left:5px;
-    bottom:20px;
+    bottom:13px;
     -webkit-animation-timing-function: ease-out;
   }
 }
   @-moz-keyframes bouncing {
     40%,70%,90% {
-      bottom:10px;
+      bottom:13px;
       -webkit-animation-timing-function: ease-out;
     }
     0% {
@@ -254,12 +253,12 @@ $$$$$$$$$$$$$$$$$$$$$*/
       -webkit-animation-timing-function: ease-in;
     }
     95% {
-      bottom:30px;
+      bottom:27;
       -webkit-animation-timing-function: ease-out;
     }
     100% {
       left:5px;
-      bottom:20px;
+      bottom:13px;
       -webkit-animation-timing-function: ease-out;
     }
   }
